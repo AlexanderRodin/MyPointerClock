@@ -23,7 +23,14 @@ class MainActivity : AppCompatActivity() {
         binding.minuteView.rotation = clockManager.getMinuteRotation()
         binding.secondView.rotation = clockManager.getSecondRotation()
 
-        val rotateAnimation = RotateAnimation(0f, 360f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f)
+        val rotateAnimation = RotateAnimation(
+            0f,
+            360f,
+            Animation.RELATIVE_TO_SELF,
+            0.5f,
+            Animation.RELATIVE_TO_SELF,
+            0.5f
+        )
         clockManager.startSecondHandAnimation(rotateAnimation)
         binding.secondView.startAnimation(rotateAnimation)
 
